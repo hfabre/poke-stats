@@ -130,7 +130,7 @@ class PokemonCard extends HTMLElement {
 
         <div class=pokemon-information>
           <div class="pokemon-types">${this.typesAsHtml()}</div>
-          <div class="pokemon-abilities">${this.pokemon.pokemon_v2_pokemonabilities.map(x => x.ability.name).join(", ")}</div>
+          <div class="pokemon-abilities">${this.pokemon.pokemon_v2_pokemonabilities.map(x => "<abbr title=\"" + x.ability.texts[0].effect + "\">" + x.ability.name + "</abbr>")}</div>
 
           <div class="ability-warning">
             * Note that some ability may impact the type effectivness chart *
