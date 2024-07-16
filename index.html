@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokeStats</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/graphql-http/umd/graphql-http.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <h1>
+    <img src="logo.png" alt="PokeStats" />
+  </h1>
+
+  <form id="search-container" onsubmit="event.preventDefault(); return findPokemon();">
+    <input value="" list="pokemon-names" type="text" id="search-input" name="pokemon" autocomplete="false" placeholder="search pokemon"/>
+    <datalist id="pokemon-names"></datalist>
+    <button type="submit">Search</button>
+  </form>
+  <p class="errors" id="search-errors"></p>
+
+  <div id="result-container">
+  </div>
+</body>
+
+</html>
